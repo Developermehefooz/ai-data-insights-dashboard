@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Advanced Data Analytics Dashboard</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/xlsx/dist/xlsx.full.min.js"></script>
+
+</head>
+
+<body>
+
+<div class="dashboard">
+
+    <!-- Sidebar -->
+
+    <div class="sidebar">
+
+        <h2>📊 Dashboard</h2>
+
+        <ul>
+
+            <li>🏠 Home</li>
+
+            <li>📈 Analytics</li>
+
+            <li>📋 Reports</li>
+
+            <li>📁 Uploads</li>
+
+            <li>⚙ Settings</li>
+
+        </ul>
+
+    </div>
+
+    <!-- Main Content -->
+
+    <div class="main-content">
+
+        <h1>📊 Data Analytics Dashboard</h1>
+
+        <!-- Upload -->
+
+        <input
+            type="file"
+            id="csvFile"
+            accept=".csv,.xlsx">
+
+        <!-- KPI Cards -->
+
+        <div class="cards">
+
+            <div class="card">
+
+                <h3>📄 Total Rows</h3>
+
+                <span id="rows">0</span>
+
+            </div>
+
+            <div class="card">
+
+                <h3>📊 Total Columns</h3>
+
+                <span id="columns">0</span>
+
+            </div>
+
+            <div class="card">
+
+                <h3>💰 Total Sales</h3>
+
+                <span id="totalSales">0</span>
+
+            </div>
+
+            <div class="card">
+
+                <h3>📈 Avg Sales</h3>
+
+                <span id="avgSales">0</span>
+
+            </div>
+
+        </div>
+
+        <!-- Statistics -->
+
+        <div id="stats"></div>
+
+        <!-- Search -->
+
+        <input
+            type="text"
+            id="search"
+            placeholder="🔍 Search data...">
+
+        <!-- Buttons -->
+
+        <div class="buttons">
+
+            <button id="downloadBtn">
+
+                ⬇ Download Data
+
+            </button>
+
+            <button id="darkMode">
+
+                🌙 Dark Mode
+
+            </button>
+
+        </div>
+
+        <!-- Charts -->
+
+        <div class="chart-container">
+
+            <div class="chart-card">
+
+                <h2>📈 Sales Trend</h2>
+
+                <canvas id="lineChart"></canvas>
+
+            </div>
+
+            <div class="chart-card">
+
+                <h2>🥧 Sales Distribution</h2>
+
+                <canvas id="pieChart"></canvas>
+
+            </div>
+
+        </div>
+
+        <!-- Data Table -->
+
+        <div class="table-section">
+
+            <h2>📋 Data Table</h2>
+
+            <div id="tableContainer"></div>
+
+        </div>
+
+    </div>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+
+</html>
